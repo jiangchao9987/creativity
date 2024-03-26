@@ -63,7 +63,7 @@ print(len(Ld)) #3
 [<MoreComments count=35, children=['ctu0791', 'ctuc5sn', 'ctu0lq1', '...']>] 
 from replace_more(limit=0)
 The <MoreComments> has 35 children, but only 23 can be detected. When zooming in, it can be found that
-in these 23, there are 3 comments of "deleted" and 20 also shared by from replace_more(limit=20)
+in these 23, there are 3 comments of "deleted" and 20 also shared by from replace_more(limit=0)
 * The rest 12 missing comments, like tutorials said, may come from removed or spam comments
 * be careful about "deleted" which will be counted into children list, and "removed" which will not be found anymore 
 

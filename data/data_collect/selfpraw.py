@@ -8,9 +8,13 @@ def months_to_seconds(dateback_months=3):
 def has_time_efficiency(created_utc, dateback_months=3):
     return time.time() - created_utc <= months_to_seconds(dateback_months)
 
-
+# dump one file with one r/subreddit
 def dump_a_subreddit(list_of_posts, subreddit_name):
-    path = os.path.join( f"{subreddit_name}.json")
+    folder_name = 'dataset'
+    if os.path.exists(folder_name)==False:
+        os.mkdir(folder_name)
+    path = os.path.join( os.getcwd(), folder_name ,f"{subreddit_name}.json")
+    #print(path)
     with open(path, 'w') as f:
         json.dump(list_of_posts,f)
 
@@ -40,7 +44,7 @@ def comments_in_a_submission(submission, dateback_months=3):
             if has_time_efficiency(comment.created_utc,dateback_months):
                 print(comment.body)
                 Comment_List.append(comment.body)
-        # there is a situation where father a comment body is "deleted" but sons of it are informative
+        # there is a situation where a father  comment body is "deleted" but sons of it are informative
         # so it is better to let below out of the "if"
         Comment_List.extend(replies_in_a_comment(comment))
 
@@ -64,7 +68,12 @@ if __name__ == "__main__":
     reddit = praw.Reddit(
         "bot1"
     )
-    subr = "funny"
-    subreddit = reddit.subreddit(subr)
-    dump_a_subreddit(submission_in_a_subreddit(subreddit,20),subr)
+    subr_list =  ['AskEngineers' ,'financialindependence' ,'Entrepreneur' ,'smallbusiness' , 'lifehacks' ,
+                'productivity', 'GetMotivated' ,'GetStudying' ,'Cooking' ,'fantasywriters' ,'WritingPrompts' ,'ShortStories','Jokes']
+    #subr = "funny"
+    for subr in subr_list:
+        subreddit = reddit.subreddit(subr)
+        dump_a_subreddit(submission_in_a_subreddit(subreddit,20),subr)
+
+
 
