@@ -3,22 +3,22 @@
 ## Data
 
 - [x] Reddit crawler
-- [ ] subreddits
-  - [ ] BrainStorming
-    - [ ] r/AskEngineers
-    - [ ] r/financialindependence
-    - [ ] r/Entrepreneur
-    - [ ] r/smallbusiness
-    - [ ] r/lifehacks
-    - [ ] r/productivity
-    - [ ] r/GetMotivated
-    - [ ] r/GetStudying
-    - [ ] r/Cooking
-  - [ ] Creative Writing
-    - [ ] r/fantasywriters
-    - [ ] r/WritingPrompts
-    - [ ] r/ShortStories
-    - [ ] r/Jokes
+- [x] subreddits
+  - [x] BrainStorming
+    - [x] r/AskEngineers
+    - [x] r/financialindependence
+    - [x] r/Entrepreneur
+    - [x] r/smallbusiness
+    - [x] r/lifehacks
+    - [x] r/productivity
+    - [x] r/GetMotivated
+    - [x] r/GetStudying
+    - [x] r/Cooking
+  - [x] Creative Writing
+    - [x] r/fantasywriters
+    - [x] r/WritingPrompts
+    - [x] r/ShortStories
+    - [x] r/Jokes
 
 
 ## Models
