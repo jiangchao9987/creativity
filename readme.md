@@ -20,8 +20,8 @@
     - [x] r/ShortStories
     - [x] r/Jokes
 
-  - [] modification of dataset
-    - [] is text in QA pair better than pure text when considering creativity
+  - [ ] modification of dataset
+    - [ ] is text in QA pair better than pure text when considering creativity
     
 
 ## Models
