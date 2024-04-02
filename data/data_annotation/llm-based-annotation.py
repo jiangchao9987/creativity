@@ -22,7 +22,7 @@ def load_model(model_name):
         model_name,
         trust_remote_code=True,
         device_map='auto',
-        dtype='auto',
+        torch_dtype='auto',
     )
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     return model, tokenizer
@@ -68,13 +68,13 @@ if __name__ == '__main__':
 
     option_ids = [tokenizer.convert_tokens_to_ids(option) for option in options]
     new_dataset = []
-    for prompt, example in tqdm(prompts, dataset):
+    for prompt, example in tqdm(zip(prompts, dataset)):
         with torch.no_grad():
             inputs = tokenizer(prompt, return_tensors='pt').to(model.device)
             outputs = model(**inputs)
 
             logits = outputs.logits
-            option_logits = logits[:, option_ids]
+            option_logits = logits[:, -1, option_ids]
             option_probs = torch.softmax(option_logits, dim=-1)
             most_likely_option = options[option_probs.argmax().item()]
         
