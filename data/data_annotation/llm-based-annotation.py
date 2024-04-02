@@ -44,6 +44,7 @@ def build_prompt(
     data_examples,
 ):
     if task_name == 'question_annotation':
+        # prompt need to be tuned according LLMs
         prompt = "Is the following a question that requires creative answers?\n\nTitle: {post_title}\n{post_main_text}\n\nChoose A or B as your answer. A: Yes, it requires creative answers. B: No, it does not require creative answers. Your answer: "
         options = ['A', 'B']
     else:
