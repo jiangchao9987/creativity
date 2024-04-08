@@ -67,22 +67,22 @@ def replies_in_a_comment( comment, dateback_months=3):
 
     return reply_list
 
-#def structure_data():
-    '''
-    { "post_title":string     --submission title
-      "post_url": string      --submission url
-      "post_main_text": string   --submission text
-      "post_comments": [         --comments belonging to the submission
-                            {
-                                "comment_author":  string    --author of this comment
-                                "comment_text":  string      --text of this comment
-                            }
-                            {
-                            }...
-                       ]
 
-    }
-    '''
+'''
+{ "post_title":string     --submission title
+  "post_url": string      --submission url
+  "post_main_text": string   --submission text
+  "post_comments": [         --comments belonging to the submission
+                        {
+                            "comment_author":  string    --author of this comment
+                            "comment_text":  string      --text of this comment
+                        }
+                        {
+                        }...
+                   ]
+
+}
+'''
 
 
 

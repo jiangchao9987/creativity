@@ -61,7 +61,9 @@ def build_prompt(
     return prompts, options
 
 if __name__ == '__main__':
+
     args = arg_parser().parse_args()
+
     model, tokenizer = load_model(args.model_name)
 
     dataset = load_data(args.dataset_file)
