@@ -8,6 +8,7 @@ class ShortIdeaGenerationConfig:
     max_new_tokens: int = 64
     num_return_sequences: int = 10
     eos_token: str = '\n'
+    #pad_token_id: str = ' '
 
 @dataclass
 class ShortWritingGenerationConfig:
@@ -16,6 +17,7 @@ class ShortWritingGenerationConfig:
     max_new_tokens: int = 512
     num_return_sequences: int = 3
     eos_token: str = '\n'
+    #pad_token_id: str = ' '
 
 @dataclass
 class LongWritingGenerationConfig:
@@ -27,6 +29,7 @@ class LongWritingGenerationConfig:
     # need to run multiple times to get multiple outputs
     num_return_sequences: int = 1
     eos_token: str = '\n'
+    #pad_token_id: str = ' '
 
 @dataclass
 class DefaultDecodingConfig1:
